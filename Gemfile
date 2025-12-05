@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby "3.4.7"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.1.1"
 # Use postgresql as the database for Active Record
@@ -8,6 +10,34 @@ gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
+
+# Authentication
+gem "devise"
+gem "devise-jwt"
+# gem "jwt"
+
+# Authorization
+gem "pundit"
+
+# Search
+gem "searchkick"
+# gem "elasticsearch-model"
+# gem "elasticsearch-rails"
+
+# Storage & Upload
+gem "aws-sdk-s3"
+gem "active_storage_validations"
+
+# API Seralization
+gem "jsonapi-serializer"
+
+# Pagination
+gem "pagy"
+
+# Monitoring
+# gem 'newrelic_rpm'
+# gem 'sentry-ruby'
+# gem 'sentry-rails'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -33,7 +63,7 @@ gem "thruster", require: false
 gem "image_processing", "~> 1.2"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
-# gem "rack-cors"
+gem "rack-cors"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -47,4 +77,13 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+end
+
+gem "bullet", group: :development
+
+group :test do
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "faker"
+  gem "shoulda-matchers"
 end
