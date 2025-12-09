@@ -12,9 +12,9 @@ gem "puma", ">= 5.0"
 # gem "jbuilder"
 
 # Authentication
-gem "devise"
-gem "devise-jwt"
-# gem "jwt"
+# gem "devise"
+# gem "devise-jwt"
+gem "jwt"
 
 # Authorization
 gem "pundit"
