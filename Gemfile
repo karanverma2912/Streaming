@@ -15,6 +15,7 @@ gem "puma", ">= 5.0"
 # gem "devise"
 # gem "devise-jwt"
 gem "jwt"
+gem "bcrypt"
 
 # Authorization
 gem "pundit"
