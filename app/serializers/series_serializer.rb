@@ -1,12 +1,12 @@
 # app/serializers/series_serializer.rb
-class SeriesSerializer < JSONAPI::Serializer
-  attributes :title, :synopsis, :kind, :status, :episodes_count,
+class SeriesSerializer < ActiveModel::Serializer
+  attributes :title, :titles, :kind, :status, :episodes_count,
              :seasons_count, :view_count, :year, :total_episodes,
-             :release_date, :end_date, :created_at, :updated_at
+             :release_date, :end_date, :created_at, :updated_at, :synopsis, :description
 
-  attribute :titles do |series|
-    series.titles
-  end
+  # attribute :titles do |series|
+  #   series.titles
+  # end
 
   # attribute :average_rating do |series|
   #   series.ratings.average(:score)&.round(2) || 0.0

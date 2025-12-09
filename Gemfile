@@ -30,7 +30,7 @@ gem "aws-sdk-s3"
 gem "active_storage_validations"
 
 # API Seralization
-gem "jsonapi-serializer"
+gem "active_model_serializers"
 
 # Pagination
 gem "pagy"
